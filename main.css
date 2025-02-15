@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+/* || REST */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --BODY-BG: #E6EFF5;
+  --WHITE: #FFFFFF;
+  --GREEN: #2AB3B1;
+  --LIGTH-GREEN: #4ABFBD;
+  --LEMON-GREEN: #C0DF33;
+  --GRAY: #9AA7BE;
+
+  /* SHADOWS */
+  --CARD-SHADOW: 0rem .9375rem 1.875rem 0rem hsla(212, 100%, 34%, 0.1488);
+  --BUTTON-SHADOW: 0rem .625rem .625rem 0rem hsla(0, 0%, 0%, 0.0973);
+
+  /* TYPOGRAPHY */
+  --FF: "Karla", serif;
+
+  /* TEXT STYLE */
+  --HEADER-TITLE-MOB: bold 1.25rem var(--FF);
+  --HEADER-SUBTITLE-MOB: bold .9375rem/1.25rem var(--FF);
+  --HEADER-TEXT-MOB: normal .875rem/1.625rem var(--FF);
+  --MAIN-TITLE-MOB: bold 1.125rem var(--FF);
+  --MAIN-PRICE-MOB: bold 2rem var(--FF);
+  --MAIN-TEXT-MOB: normal 1rem/1.625rem var(--FF);
+  --MAIN-BUTTON-MOB: bold 1rem var(--FF);
+  --FEATURE-TEXT-MOB: normal .875rem/1.25rem var(--FF);
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+.responsive-image {
+  display: none;
+}
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: var(--BODY-BG);
+  display: grid;
+  place-content: center;
+}
+
+/* PRICING CARD */
+.pricing-card {
+  max-width: 311px;
+  min-height: 722px;
+  background-color: var(--WHITE);
+  border-radius: .3125rem;
+  margin: 4.5rem auto 3.875rem auto;
+  box-shadow: var(--CARD-SHADOW);
+}
+
+/* HEADER */
+.pricing-card__header {
+  max-width: 100%;
+  height: 267px;
+  padding: 1.75rem 1.5rem 2rem 1.5rem;
+}
+
+.pricing-card__header-title {
+  font: var(--HEADER-TITLE-MOB);
+  color: var(--GREEN);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.0156rem;
+}
+
+.pricing-card__header__subtitle {
+  font: var(--HEADER-SUBTITLE-MOB);
+  color: var(--LEMON-GREEN);
+  margin-bottom: 1rem;
+  letter-spacing: -0.0119rem;
+}
+
+.pricing-card__header__description {
+  font: var(--HEADER-TEXT-MOB);
+  color: var(--GRAY);
+  letter-spacing: -0.0106rem;
+}
+
+/* SUBSCRIPTION */
+.pricing-card__subscription {
+  width: 100%;
+  height: 228px;
+  background-color: var(--GREEN);
+  padding: 1.5rem;
+}
+
+.pricing-card__subscription-title {
+  font: var(--MAIN-TITLE-MOB);
+  color: var(--WHITE);
+  margin-bottom: 1.125rem;
+  letter-spacing: -0.0138rem;
+}
+
+.pricing-card__subscription-price {
+  width: 147px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  gap: .6875rem;
+  margin-bottom: .25rem;
+}
+
+.pricing-card__price {
+  font: var(--MAIN-PRICE-MOB);
+  color: var(--WHITE);
+  letter-spacing: -0.025rem;
+}
+
+.pricing-card__label {
+  font: var(--MAIN-TEXT-MOB);
+  color: hsla(0, 0%, 100%, 0.50);
+  letter-spacing: -0.0125rem;
+}
+
+.pricing-card__subscription-description {
+  font: var(--MAIN-TEXT-MOB);
+  color: var(--WHITE);
+  letter-spacing: -0.0125rem;
+  margin-bottom: 1.625rem;
+}
+
+/* BUTTON */
+.pricing-card__cta {
+  font: var(--MAIN-BUTTON-MOB);
+  width: 100%;
+  padding: .9375rem 6.375rem .875rem 6.375rem;
+  border-radius: .3125rem;
+  border: none;
+  outline: none;
+  background-color: var(--LEMON-GREEN);
+  color: var(--WHITE);
+  box-shadow: var(--BUTTON-SHADOW);
+}
+
+/* FEATURES */
+.pricing-card__features {
+  width: 100%;
+  height: 227px;
+  background-color: var(--LIGTH-GREEN);
+  padding: 1.5rem 3.0625rem 1.5rem 1.5rem;
+}
+
+.pricing-card__features-title {
+  font: var(--MAIN-TITLE-MOB);
+  color: var(--WHITE);
+  letter-spacing: -0.0138rem;
+  margin-bottom: 1.125rem;
+}
+
+.pricing-card__features-list {
+  list-style-type: none;
+}
+
+.pricing-card__features-list li {
+  font: var(--FEATURE-TEXT-MOB);
+  letter-spacing: -0.0106rem;
+  color: hsla(0, 0%, 100%, 0.75);
+}
